@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>React em 1 Minuto</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+  <style type="text/css">
+    #like_button_container button {
+      background-color: #0e77d5;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>React em 1 Minuto</h1>
+
+  <div id="like_button_container"></div>
+
+  <h2>Sed fermentum lorem at pulvinar dictum</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ultrices rhoncus. Integer non mattis tellus, eu rhoncus ipsum. Nulla dictum neque a felis pretium mattis. Nulla fringilla interdum dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer vitae efficitur mauris. Morbi tristique dignissim porttitor. Etiam congue, elit ac porttitor aliquet, ipsum nunc egestas augue, quis maximus ex tellus euismod felis. Sed ipsum metus, pulvinar eget magna et, imperdiet semper ipsum. Integer pellentesque lorem eget elit auctor dignissim. Ut ac sapien ut nisl auctor rhoncus eget non ipsum. Ut consequat sed quam non auctor. Suspendisse nec suscipit odio. Nunc ac purus quis mauris suscipit sodales. Duis non augue sit amet nulla viverra feugiat quis et erat. Aliquam erat volutpat.<p>
+
+  <h2>In sed lacus in tellus sodales sagittis</h2>
+  <p>Pellentesque ultricies turpis ac nibh sodales, eu sollicitudin nibh eleifend. Cras eros sapien, lobortis eu ullamcorper ut, tincidunt tristique sem. Fusce maximus dignissim arcu sit amet consectetur. Quisque vel viverra augue. Sed augue enim, pellentesque a tempus venenatis, gravida ac tellus. Nulla tincidunt non est id tincidunt. Nullam condimentum leo augue, ut luctus lectus porttitor vel. Curabitur in ipsum at dolor porta luctus luctus at nisi. Maecenas nec gravida eros. Proin vulputate, turpis a dignissim aliquet, nisl purus ornare enim, a elementum ligula dui non mi.
+  </p>
+
+  <h2>Aenean posuere lectus at efficitur aliquam</h2>
+  <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ornare justo eget sem condimentum dapibus. Sed a consequat urna. Integer vel augue lacus. Proin a semper dui, eu euismod ligula. Mauris luctus euismod purus, nec vestibulum eros luctus sed. Maecenas at nibh bibendum, ultrices odio at, luctus ipsum. Nunc dictum felis vitae tortor mattis sollicitudin. Suspendisse vulputate tellus ac quam tempus porttitor. Duis posuere luctus dolor, ac scelerisque est consequat eget. Suspendisse porttitor metus at tristique suscipit. Proin lobortis ante sit amet quam tincidunt placerat.</p>
+
+  <h2>Donec non felis ac quam sodales rhoncus at dapibus tellus</h2>
+  <p>Quisque et porttitor leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ipsum leo, condimentum a bibendum eu, efficitur vel metus. Sed non tellus blandit, vulputate arcu et, varius erat. Donec id tellus ultrices, imperdiet purus ac, porta tortor. Praesent mattis velit quis ornare mattis. Nam eu mauris sollicitudin, tempus nisl in, pretium lorem. Nam ac massa cursus, venenatis felis ut, pharetra lectus. Donec ornare, enim a vehicula placerat, leo ante vestibulum odio, vel laoreet diam nulla at justo. Curabitur lacinia tincidunt lectus nec imperdiet.</p>
+
+  <p>Praesent at neque ac tellus ultricies sagittis</p>
+  <p>In sit amet condimentum leo. Integer faucibus molestie risus, eu dictum diam accumsan vel. Quisque pellentesque mauris suscipit ante sodales rhoncus. Mauris blandit elit a ligula tristique porttitor. Aliquam non lorem et odio porta iaculis at at enim. Nulla leo nisi, sollicitudin id velit vel, tristique lacinia massa. Suspendisse potenti.</p>
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  <script type="text/javascript">
+    const e = React.createElement;
+    class LikeButton extends React.Component {
+      constructor(props) {
+        super(props);
+
+        this.state = { liked: false };
+      }
+
+      render() {
+
+        if (this.state.liked) {
+          return 'You liked this.';
+        }
+
+        return e('button', {
+          onClick: () => { this.setState({ liked: true}); }
+        }, 'Like');
+      }
+    }
+
+    const domContainer = document.querySelector('#like_button_container');
+    ReactDOM.render(e(LikeButton), domContainer);
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
